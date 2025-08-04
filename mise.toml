@@ -9,23 +9,23 @@ PYTHONPATH = "."
 enter = "echo 'Welcome to the template project'"
 
 [tasks.app]
-run = 'uv run python src/app.py'
+run = 'uv run python aicb/app.py'
 
 [tasks.test]
 run = 'uv run pytest'
 
 [tasks.cov]
 run = [
-  'uv run pytest --cov=src --cov-report=xml',
+  'uv run pytest --cov=aicb --cov-report=xml',
   'uv run coverage-badge -o docs/coverage.svg -f',
   'uv run interrogate --generate-badge docs/interrogate.svg',
 ]
 
 [tasks.sec]
-run = ['uv run bandit -r src']
+run = ['uv run bandit -r aicb']
 
 [tasks.cov-html]
-run = 'uv run pytest --cov=src --cov-report=html'
+run = 'uv run pytest --cov=aicb --cov-report=html'
 
 [tasks.pyright]
 run = 'uv run pyright'

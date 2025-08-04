@@ -7,9 +7,9 @@
   "id": "conv_001",
   "topic": "anxiety",
   "messages": [
-    {"datetime": "2023-05-12T14:20:00Z", "role": "user", "content": "I feel really anxious and it's affecting my sleep."},
-    {"datetime": "2023-05-12T15:20:00Z", "role": "operator", "content": "I'm sorry to hear that. Anxiety can definitely affect your sleep. Have you tried any relaxation techniques before bedtime?"},
-    {"datetime": "2023-05-12T16:20:00Z", "role": "user", "content": "How do I do that"}
+    {"timestamp": "2023-05-12T14:20:00Z", "role": "user", "content": "I feel really anxious and it's affecting my sleep."},
+    {"timestamp": "2023-05-12T15:20:00Z", "role": "operator", "content": "I'm sorry to hear that. Anxiety can definitely affect your sleep. Have you tried any relaxation techniques before bedtime?"},
+    {"timestamp": "2023-05-12T16:20:00Z", "role": "user", "content": "How do I do that"}
   ]
   "metadata": {
     "timestamp": "2023-05-12T14:20:00Z",

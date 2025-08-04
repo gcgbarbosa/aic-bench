@@ -26,6 +26,7 @@ class Conversation(BaseModel):
     id: str = Field(..., description="Unique identifier for the conversation")
     topic: str = Field(..., description="Topic or category of the conversation")
     messages: list[Message] = Field(..., description="List of messages in the conversation")
+    raw: str = Field(..., description="Raw data associated with the conversation")
     metadata: Metadata = Field(..., description="Metadata about the conversation")
 
 

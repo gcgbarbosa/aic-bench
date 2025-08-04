@@ -1,18 +1,20 @@
 """Entrypoint"""
 
+from aicb.data_prep.awel_reader import AwelReader
+
 
 def main():
     """
-    Main function that prints a greeting message and returns the sum of 1 and 1.
-
-    This function outputs a simple greeting to the console and computes a basic arithmetic
-    operation.
-
-    Returns:
-        int: The result of the arithmetic operation (1 + 1), which is 2.
+    main
     """
-    print("Hello from template!")
-    return 1 + 1
+    reader = AwelReader("data/2023_originalfile_nonicknames.csv")
+
+    conversations = reader.load_conversations()
+
+    if conversations:
+        print(f"Loaded {len(conversations)} conversations.")
+    else:
+        print("fuck you")
 
 
 if __name__ == "__main__":
