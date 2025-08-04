@@ -117,6 +117,9 @@ class AwelReader:
             >>> print(f"First conversation has {len(first_conv.messages)} messages")
         """
 
+        if len(self._conversations) > 0:
+            return self._conversations
+
         logger.info(f"Loading conversations from {self.data_path}")
         data = pd.read_csv(self.data_path)
 
@@ -189,7 +192,7 @@ class AwelReader:
         # Build Conversation
         return Conversation(
             id=str(uuid.uuid4()),
-            topic="Conflict with friends",
+            topic="Uncategorized",
             messages=messages,
             metadata=Metadata(timestamp=conv_datetime, source=source),
             raw=text,

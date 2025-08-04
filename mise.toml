@@ -11,6 +11,10 @@ enter = "echo 'Welcome to the template project'"
 [tasks.app]
 run = 'uv run python aicb/app.py'
 
+
+[tasks.interface]
+run = 'uv run streamlit run aicb/interface.py'
+
 [tasks.test]
 run = 'uv run pytest'
 
