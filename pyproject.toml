@@ -9,6 +9,7 @@ dependencies = [
     "loguru>=0.7.3",
     "notebook>=7.4.4",
     "pandas>=2.3.1",
+    "pydantic>=2.11.7",
 ]
 
 [dependency-groups]
@@ -25,7 +26,7 @@ dev = [
 ]
 
 [tool.pyright]
-include = ["src"]
+include = ["aicb"]
 venvPath = "."
 venv = ".venv"
 
@@ -53,10 +54,10 @@ addopts = "-ra -q"
 testpaths = ["tests"]
 
 [tool.setuptools.packages.find]
-where = ["src"]
+where = ["aicb"]
 
 [tool.setuptools.package-data]
-"src" = ["py.typed"]
+"aicb" = ["py.typed"]
 
 [tool.interrogate]
 ignore-init-method = true
@@ -67,7 +68,7 @@ ignore-private = false
 ignore-module = false
 ignore-property-decorators = false
 fail-under = 95
-exclude = ["tests/", "setup.py", "docs", 'old']
+exclude = ["tests/", "setup.py", "docs", 'old', 'notebooks']
 verbose = 1
 omit-covered-files = false
 quiet = false
