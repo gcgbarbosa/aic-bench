@@ -1,7 +1,7 @@
-"""Streamlit interface for visualizing AWEL chat data.
+"""Streamlit interface for visualizing chat data.
 
 This module provides a web-based interface using Streamlit to explore and visualize
-mental health conversation data from the AWEL dataset. Users can select conversations
+mental health conversation data from the dataset. Users can select conversations
 from a dropdown and view the message exchange in a chat-like format.
 
 Features:
@@ -175,7 +175,7 @@ def display_dataset_statistics(reader: AwelReader):
 
 def main():
     """Main Streamlit application."""
-    st.set_page_config(page_title="AWEL Chat Data Visualizer", page_icon="💬", layout="wide", initial_sidebar_state="expanded")
+    st.set_page_config(page_title="Chat Data Visualizer", page_icon="💬", layout="wide", initial_sidebar_state="expanded")
 
     st.title("💬 Chat Data Visualizer")
     st.markdown("---")
@@ -244,7 +244,7 @@ def main():
     st.markdown(
         """
         <div style="text-align: center; color: #666; font-size: 0.8em;">
-            AWEL Mental Health Chat Data Visualizer | Built with Streamlit
+            Chat Data Visualizer | Built with Streamlit
         </div>
         """,
         unsafe_allow_html=True,
