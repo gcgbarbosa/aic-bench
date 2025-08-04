@@ -1,0 +1,71 @@
+[project]
+name = "template"
+version = "0.0.1"
+description = "Starting point for Python projects"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["loguru>=0.7.3"]
+
+[dependency-groups]
+dev = [
+  "pre-commit>=4.2.0",
+  "pyright>=1.1.398",
+  "pytest-cov>=6.1.1",
+  "pytest>=8.3.5",
+  "ruff>=0.11.2",
+  "coverage-badge>=1.1.2",
+  "interrogate[png]>=1.7.0",
+  "docformatter>=1.7.5",
+  "bandit>=1.8.3",
+]
+
+[tool.pyright]
+include = ["src"]
+venvPath = "."
+venv = ".venv"
+
+[tool.ruff]
+exclude = [".venv", "docs"]
+line-length = 128
+indent-width = 4
+target-version = "py312"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.black]
+line-length = 120
+target-version = ["py312"]
+skip-string-normalization = false
+skip-magic-trailing-comma = false
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"src" = ["py.typed"]
+
+[tool.interrogate]
+ignore-init-method = true
+ignore-init-module = true
+ignore-magic = false
+ignore-semiprivate = false
+ignore-private = false
+ignore-module = false
+ignore-property-decorators = false
+fail-under = 95
+exclude = ["tests/", "setup.py", "docs", 'old']
+verbose = 1
+omit-covered-files = false
+quiet = false
+whitelist-regex = []
+ignore-regex = []
+color = true
